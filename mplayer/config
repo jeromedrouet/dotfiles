@@ -1,0 +1,45 @@
+# ~/.mplayer/config file
+#
+#  Copyright (C) 2013 Jérôme Drouet <jerome.drouet -at- gmail.com>
+#
+#  initially available from github at https://github.com/jeromedrouet/dotfiles.git
+#
+#
+#
+#              DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+#                     Version 2, December 2004
+#
+#   Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+# 
+#  Everyone is permitted to copy and distribute verbatim or modified
+#  copies of this license document, and changing it is allowed as long
+#  as the name is changed.
+#
+#             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+#    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+#
+#   0. You just DO WHAT THE FUCK YOU WANT TO.
+#
+#
+
+
+# Write your default config options here!
+
+# subtitles charset
+utf8=yes
+
+# prefer using vdpau if available - note the ending comma to fallback to other codecs
+vo=vdpau,
+vc=ffh264vdpau,ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,ffodivxvdpau,
+
+# use large amount of cache to avoid micro frezees even in HD over wifi - 50 MB should be good
+cache=50000
+
+# default soundcard : use spdif output
+ao=alsa:device=spdif
+
+zoom=yes
+
+# to play some files with no sound and the following error : "(Requested audio codec family [a52] (afm=liba52) not available. Enable it at compilation.)", use the following command :
+# mplayer -demuxer lavf -ac ffac3 
+
